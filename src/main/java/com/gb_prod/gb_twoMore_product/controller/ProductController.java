@@ -34,5 +34,6 @@ public class ProductController {
     public String indexPage(Model model){
         model.addAttribute("product", repository.findAll());
         return "product";
+
     }
 }
