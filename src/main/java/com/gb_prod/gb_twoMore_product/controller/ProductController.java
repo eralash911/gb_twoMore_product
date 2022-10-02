@@ -24,10 +24,11 @@ public class ProductController {
         this.repository = repository;
     }
 
-//    @GetMapping("/{id}")
-//    public String idPage(@PathVariable("id") Long id, Model model){
-//        model.addAttribute("product", repository.findById(id));
-//    }
+    @GetMapping("/{id}")
+    public String idPage(@PathVariable("id") Long id, Model model){
+        model.addAttribute("product", repository.findById(id));
+        return "product-form";
+    }
 
     @GetMapping
     public String indexPage(Model model){
